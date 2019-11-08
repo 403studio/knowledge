@@ -32,7 +32,7 @@ Refs #133
 > * footers other than BREAKING CHANGE: <description> may be provided and follow a convention similar to [git trailer format](https://git-scm.com/docs/git-interpret-trailers)
 
 Type | Description
-- | -
+-|-|
 feat | 新增feature
 fix | 修复bug
 docs | 仅仅修改了文档，比如README, CHANGELOG, CONTRIBUTE等等

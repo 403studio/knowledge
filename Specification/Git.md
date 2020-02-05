@@ -60,9 +60,8 @@ chore | 改变构建流程、或者增加依赖库、工具等
 > [standard-version](https://github.com/conventional-changelog/standard-version):Automate versioning and CHANGELOG generation, with semver.org and conventionalcommits.org
 
 ## Git分支管理
-
+![分支管理](../images/Git团队协作.png)
 ### 分支类型
-
 * master 主分之(生产环境分支)，确保任何时刻该分之上的代码都是可发布的稳定的，不允许直接提交代码到该分支。为实现更严格的控制可以添加权限，只有主程序员才可操作该分支，普通开发员无权限
 * develop 开发分支，该分支上的代码是开发完成且经过测试(自测)的代码。在多人协作开发的场景下不建议直接在该分支上提交代码应该配合功能分支、预发布分支和补丁分支来进行代码的合并
 * feature/FEATURE_NAME 功能分支
@@ -71,7 +70,6 @@ chore | 改变构建流程、或者增加依赖库、工具等
 * vMAJOR.MINOR.PATCH 版本标签
 
 ### 分支说明
-
 分支类型 | 定义 | 作用 | 合并关系 | 建立时机 | 初始代码来源
 -|-|-|-|-|-|
 master | 主分支 | 记录每一个正式发布版本，TAG所在分支 | 允许来自release和hotfix分支的合并 | 仓库初始化 | 仓库初始化

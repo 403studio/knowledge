@@ -84,4 +84,4 @@ hotfix | 补丁分支 | 修复已发布版本的bug | 不允许来自任何分�
 * 单人开发维护的项目可以适当的进行精简
 * 使用命令行工具时使用`git merge --no-ff`进行分支合并
 * 如果需要同步最新的代码可以使用`git rebase`来代替`git merge`
-* 可以使用SourceTree图形化工具来进行管理，SourceTree提供gitflow的功能符合上述提及的分支管理策略的规范
+* 可以使用SourceTree图形化工具来进行管理，SourceTree提供gitflow的功能符合上述提及的分支管理策略的规范。使用SourceTree提供的gitflow功能在补丁分支使用时可以与GitHub的issue关联，如果确定修复了某个issue可以在提交日志中写`fix #ISSUE_NO`或`close #ISSUE_NO`等信息来直接关闭某个issue

@@ -34,13 +34,23 @@ echo "module.exports = {extends: ['@commitlint/config-conventional']};" > commit
 }
 // 如果是使用yorkie，使用`commitlint -E GIT_PARAMS`
 ```
-* 安装standard-version，并配置package.json。如果是第一次运行来生成CHANGELOG则使用命令`npx standard-version --first-release`，会基于package.json中的version来生成CHANGELOG，并不会对版本号进行修改。在以后需要发布版本时直接运行`npm run release`即可，请注意需要在master上运行该命令以确保所有的tag都是基于master分支的。
+* 安装standard-version，并配置package.json。如果是第一次运行来生成CHANGELOG则使用命令`npx standard-version --first-release`，会基于package.json中的version来生成CHANGELOG，并不会对版本号进行修改。在以后需要发布版本时直接运行`npm run release`即可，请注意需要在master上运行该命令以确保所有的tag都是基于master分支的。standard-version能够根据repository.url自动生成issue、commit等地址。`git commit -m "feat: xxxxx(#JIRA_ID)"`
 ```json
 // package.json
 {
   "scirpts": {
     "release": "standard-version",
     "lint": "vue-cli-service lint"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/myproject"
+  },
+  // standard-version配置，使用jira id
+  "standard-version": {
+    "scripts": {
+      "postchangelog": "replace 'https://github.com/myproject/issues/' 'https://myjira/browse/' CHANGELOG.md"
+    }
   }
 }
 ```
